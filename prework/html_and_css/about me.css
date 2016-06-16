@@ -1,0 +1,13 @@
+header{
+	background: white;
+	font-family: monospace;
+}
+
+body{
+	background: RosyBrown;
+	font-family: Helvetica;
+}
+
+.articleContainer {
+	background-color: PapayaWhip;
+}
