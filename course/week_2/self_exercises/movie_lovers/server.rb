@@ -32,9 +32,10 @@ post "/search" do
 end
 
 post "/get_answer" do #/get_answer doesn't have to be an actual page/erb
-	results_by_release = final_search_results.sort {|item1, item2| item2.year <=> item1.year} 
-	newest_title = results_by_release[0] #need to pick out a specific year, otherwise it's a whole instance of movie/title/release date/etc
-	
+	@poster_search_results = final_search_results
+	results_by_release = @poster_search_results.sort {|item1, item2| item2.year <=> item1.year} 
+	newest_title = results_by_release[0]
+
 	#directing guess to either correct/incorrect response page
 	guess = params[:guessed_year]
 	if guess == newest_title
