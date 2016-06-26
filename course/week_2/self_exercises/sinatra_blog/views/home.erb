@@ -1,0 +1,11 @@
+<!-- home.erb -->
+
+<h1>Welcome to Blog City</h1>
+
+<ul>
+	<li>
+		<% @posts_array.each_with_index do |post, index| %>
+			<a href="/post_details/<%= index %>"><%= post.title %></a>	
+ 		<% end %>
+ 	</li>
+</ul>

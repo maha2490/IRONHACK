@@ -1,0 +1,17 @@
+<!--search.erb-->
+
+<h1>IMDB search results</h1>
+
+<h2>Guess which title is the newest!</h2>
+
+<div>
+			<form method="post" action="/get_answer">
+	<% @poster_search_results.each do |movie| %>
+		<img src="<%= movie.poster %>" width="100" height="150"/>
+		<input type="hidden" name = "guessed_year" value = <%=movie.year%> >
+				<button type="submit">Click to choose this one!</button>	
+				<br>	
+	<% end %> 
+	</form>
+</div>
+
