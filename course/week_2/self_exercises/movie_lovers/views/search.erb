@@ -8,7 +8,7 @@
 			<form method="post" action="/get_answer">
 	<% @poster_search_results.each do |movie| %>
 		<img src="<%= movie.poster %>" width="100" height="150"/>
-		<input type="hidden" name = "guessed_year" value = <%=movie.year%> >
+		<input type="hidden" name = "guessed_movie" value = <%=movie.title%> >
 				<button type="submit">Click to choose this one!</button>	
 				<br>	
 	<% end %> 

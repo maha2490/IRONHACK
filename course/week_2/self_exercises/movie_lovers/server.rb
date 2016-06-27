@@ -37,11 +37,11 @@ post "/get_answer" do #/get_answer doesn't have to be an actual page/erb
 	newest_title = results_by_release[0]
 
 	#directing guess to either correct/incorrect response page
-	guess = params[:guessed_year]
-	if guess == newest_title
+	guess = params[:guessed_movie]
+	if guess == newest_title.title      #use sessions or redefine array
 		erb(:correct_guess)
 	else
-		erb(:search)
+		erb(:incorrect_guess)
 	end
 end
 
