@@ -1,0 +1,309 @@
+/*bootstrap.css*/
+
+body {
+	background-image: url("https://trello-backgrounds.s3.amazonaws.com/53baf533e697a982248cd73f/4200x4200/48dbf0b5a546541e847e267a5dcd2201/shutterstock_134707556.jpg");
+	background-position: left top;
+	background-attachment: fixed;
+	background-size: 100% 190%;
+}
+
+#logo {
+	width: 90px;
+	height: 34px;
+	opacity: .5;
+	position: relative;
+	top: 6px;
+	left: 300px;
+}
+
+.glyphicon-stats {
+	color: white;
+	position: absolute;
+	font-size: 16px;
+	top: 12px;
+	left: 30px;
+}
+
+#rectangle1 {
+	display: inline-block;
+	height: 30px;
+	width: 120px;
+	border-radius: 3px;
+	background-color: lightgrey;
+	opacity: 0.4;
+	position: relative;
+	top: 5px;
+	left: -3px;	
+}
+
+#upper_boards {
+	display: inline-block;
+	color: white;
+	font-size: 16px;
+	position: relative;
+	left: -80px;
+	top: -4px;
+	opacity: 0.9;
+	z-index: 1;
+}
+
+#rectangle2 {
+	display: inline-block;
+	height: 30px;
+	width: 147px;
+	border-radius: 3px;
+	background-color: lightgrey;
+	opacity: 0.4;
+	position: relative;
+	top: 5px;
+	right: 57px;	
+	z-index: -1;
+}
+
+.glyphicon-search {
+	display: inline-block;
+	color: white;
+	top: 13px;
+	right: 80px;
+	z-index: 1;
+	opacity: .9;
+	position: absolute;
+	  -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      filter: FlipH;
+      -ms-filter: "FlipH";
+
+}
+
+#rectangle3 {
+	display: inline-block;
+	height: 30px;
+	width: 40px;
+	border-radius: 3px;
+	background-color: lightgrey;
+	opacity: 0.4;
+	position: relative;
+	top: 5px;
+	left: 79px;	
+}
+
+#name {
+	display: inline-block;
+	color: white;
+	font-size: 16px;
+	position: relative;
+	right: 42px;
+	top: -4px;
+	opacity: 0.9;
+	z-index: 1;
+}
+#rectangle4 {
+	display: inline-block;
+	height: 30px;
+	width: 128px;
+	border-radius: 3px;
+	background-color: lightgrey;
+	opacity: 0.4;
+	position: relative;
+	top: 5px;
+	right: -75px;	
+	z-index: -1;
+}
+.glyphicon-pause {
+	display: inline-block;
+	color: white;
+	top: 8px;
+	right: 188px;
+	z-index: 1;
+	opacity: .6;
+	position: absolute;
+	color: black;
+	font-size: 26px;
+}
+#rectangle5 {
+	display: inline-block;
+	height: 30px;
+	width: 33px;
+	border-radius: 3px 0px 0px 3px;
+	background-color: white;
+	opacity: 0.9;
+	position: relative;
+	top: 5px;
+	right: -83px;	
+	z-index: 1;
+}
+.glyphicon-bell {
+	display: inline-block;
+	color: white;
+	top: 14px;
+	right: 25px;
+	z-index: 1;
+	opacity: .9;
+	position: absolute;
+	font-size: 16px;
+}
+#rectangle6 {
+	display: inline-block;
+	height: 30px;
+	width: 40px;
+	border-radius: 3px;
+	background-color: lightgrey;
+	opacity: 0.4;
+	position: fixed;
+	top: 5px;
+	right: 13px;	
+	z-index: -1;
+}
+
+/*------------------------------------------------------*/
+/*LOWER PORTION*/
+
+#large_lower_box {
+	display: inline-block;
+	overflow: auto;
+	position: fixed;
+	top: 41px;
+	right: 0;
+	left: 0;
+	height: 800px;
+	background-color: rgba(255, 255, 255, 0.4); 
+}
+.stats2 {
+	color: rgb(21, 125, 227);
+	z-index: 0;
+	position: absolute;
+	top: 12px;
+	left: 26px;
+	font-size: 30px;
+	/*transform: rotate(180deg);*/
+}
+.agile_board {
+	color: white;
+	font-size: 22px;
+	opacity: 0.9;
+	position: relative;
+	top: 5px;
+	left: 8px;
+}
+.glyphicon-briefcase {
+	display: inline-block;
+	color: white;
+	position: fixed;
+	top: 56px;
+	left: 200px;
+	font-size: 12px;
+}
+.nav-pills pills1{
+	position: relative;
+	display: inline-block;
+	color: white;
+	font-size: 12px;
+	opacity: 0.9;
+	top: 4px;
+	left: 64px;
+}
+#nav_text2{
+	color: white;
+	font-size: 13px;
+	opacity: 0.9;
+	position: fixed;
+	top: 54px;
+	left: 219px;
+
+}
+.glyphicon-star-empty {
+	display: inline-block;
+	color: white;
+	position: fixed;
+	top: 56px;
+	left: 352px;
+	font-size: 14px;
+}
+.glyphicon-globe {
+	display: inline-block;
+	color: white;
+	position: fixed;
+	top: 57px;
+	left: 395px;
+	font-size: 12px;
+}
+#nav_text3{
+	color: white;
+	font-size: 13px;
+	opacity: 0.9;
+	position: fixed;
+	top: 55px;
+	left: 29%;
+}
+.glyphicon-calendar {
+	color: white;
+	display: inline-block;
+	top: 56px;
+	right: 33%;
+	position: fixed;
+	font-size: 12px;
+}
+#nav_text4{
+	color: white;
+	font-size: 13px;
+	opacity: 0.9;
+	position: fixed;
+	top: 54px;
+	left: 971px;
+}
+#rectangle7 {
+	display: inline-block;
+	height: 100%;
+	width: 27%;
+	border-radius: 3px;
+	background-color: white;
+	position: fixed;
+	top: 41px;
+	right: -2px;	
+}
+#col1{
+	position: fixed;
+	top: 18%;
+	background-color: rgb(216,216,216);
+	border-radius: 3px;
+	width: 320px;
+	height: 370px;
+	margin-right: 20px;
+	margin-left: 15px;
+}
+#col2{
+	position: fixed;
+	top: 18%;
+	left: 25%;
+	background-color: rgb(216,216,216);
+	border-radius: 3px;
+	width: 323px;
+	height: 400px;
+	margin-right: 20px;
+}
+#col3{
+	position: fixed;
+	top: inherit;
+	right: 27%;
+	background-color: rgb(216,216,216);
+	border-radius: 3px;
+	width: 320px;
+	height: 200px;
+	margin-right: 20px;
+	margin-left: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
