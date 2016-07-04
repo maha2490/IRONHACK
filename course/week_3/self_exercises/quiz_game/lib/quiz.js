@@ -27,13 +27,12 @@ class Quiz{
 		else if (userResponse === this.array[this.counter].answer){
 			console.log("Right, off you go.");
 			this.counter ++;
-			this.pointCounter += this.array.pointValue;
+			this.pointCounter += this.array[this.counter].pointValue;
 			console.log("You have " + this.pointcounter + " points.");
 			this.beginQuiz();       //if method is inside another, needs .this before to work
-
 		}else{
 			console.log("You shall not cross!");
-			this.pointCounter -= this.array.pointValue;
+			this.pointCounter -= this.array[this.counter].pointValue;
 			console.log("You have " + this.pointcounter + " points.");
 			this.beginQuiz();
 		}
