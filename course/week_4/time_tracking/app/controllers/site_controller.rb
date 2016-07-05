@@ -1,11 +1,12 @@
 class SiteController < ApplicationController
-
-	def home
+# wired to go into views/site folder files
+	
+	 def home
 		render "home"
 	end
 
 	def contact
-		render "contact"
+		render "contact"  #looking for site file with this name
 	end
 
 end
