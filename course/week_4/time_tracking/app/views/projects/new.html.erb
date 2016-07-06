@@ -1,0 +1,16 @@
+<!-- new.html.erb -->
+
+<h2>Add a project</h2>
+
+<!-- writing a form in Ruby  |
+	versus HTML			     v -->
+
+<%= form_for @my_project do |f| %>  <!-- @my_project tells Rails where to go & retrieve info -->
+	<%= f.label :name %>			<!-- check schema to format form with proper parameters -->
+	<%= f.text_field :name %>
+
+	<%= f.label :description %>
+	<%= f.text_area :description %>
+
+	<%= f.button %>
+<% end %>

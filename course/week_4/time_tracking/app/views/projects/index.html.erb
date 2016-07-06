@@ -1,0 +1,17 @@
+<!-- index.html.erb -->
+
+<h2>List of Projects</h2>
+
+<ul>
+	<% @projects_array.each do |the_project| %>
+	<li>
+		<a href="/projects/<%= the_project.id %>"> <!-- accessing item by id# in database -->
+		<%=the_project.name%>
+		</a>
+
+		<% if the_project.description != nil %>
+		- <%=the_project.description%>
+		<% end %>
+	</li>
+	<% end%>
+</ul>

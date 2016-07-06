@@ -1,7 +1,7 @@
 class SiteController < ApplicationController
 # wired to go into views/site folder files
 	
-	 def home
+	def home
 		render "home"
 	end
 

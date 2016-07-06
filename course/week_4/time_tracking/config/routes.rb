@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-# sends to site controller & into the methods there
+# sends to specified controller & into the methods there
   
   get "/", to: "site#home"
   get "/contact", to: "site#contact"
-  # post "/another_page"
+  get"/projects", to: "projects#index"
+  get"/projects/new", to: "projects#new"
+  post "/projects", to: "projects#create"
+  get"/projects/:id", to: "projects#show"
 end
