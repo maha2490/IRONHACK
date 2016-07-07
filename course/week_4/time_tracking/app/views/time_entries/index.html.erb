@@ -6,6 +6,7 @@
 	<% @my_entries.each do |entry| %>
 	<li>
 
+	<%= entry.comments %> took:
 	<%= entry.hours %> h
 	<%= entry.minutes %> m -
 	<%= entry.date %>
@@ -14,3 +15,7 @@
 	<% end %>
 
 </ul>
+
+<a href="/projects/<%= @my_project.id %>/time_entries/new">
+	Add a time entry to <%= @my_project.name %>
+</a>

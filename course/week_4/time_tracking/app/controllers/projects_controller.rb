@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
 		render "index"
 	end
 
-	def new
+	def new   #is a GET with a form
 		@my_project = Project.new
 		render "new"
 	end
@@ -16,7 +16,7 @@ class ProjectsController < ApplicationController
 		render "show"
 	end
 
-	def create
+	def create #is a POST, not actual page & redirects
 		@my_project = Project.new( 
 			:name => params[:project][:name],
 			:description => params[:project][:description])
