@@ -1,0 +1,89 @@
+
+
+.background_image_index {
+	background-image: image-url("venue.jpg");
+	background-size: cover;
+    width: 100%;
+    height: 104%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.clearfix:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.header_wrap {
+	font-family: 'Muli', sans-serif;
+    background-color: rgba(231, 232, 231, 0.5);
+    font-size: 34px;
+    text-align: center;
+    color: #474143;
+    letter-spacing: 15px;
+    width: 55%;
+    left: 21%;
+    top: 4%;
+    position: fixed;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.main_wrap {
+	font-family: 'Muli', sans-serif;
+	position: fixed;
+    top: 32%;
+    width: 100%;
+    height: 77%;
+    padding: 1%;
+    color: #474143;
+    box-sizing: border-box;
+    padding: 4%;
+}
+.upcoming_shows{
+	background-color: rgba(231, 232, 231, 0.7);
+	top: 32%;
+    left: 3%;
+    width: 59%;
+    padding: 1%;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: large;
+    line-height: 30px;
+}
+
+.previous_shows{
+	display: inline-block;
+    float: right;
+    right: 17%;
+    clear: left;
+    background-color: rgba(231, 232, 231, 0.7);
+    top: 82%;
+    padding: 2%;
+    margin-right: 4%;
+    box-sizing: border-box;
+    border-radius: 5px; 
+}
+
+
+/*all other pages -----------------------------------*/
+
+.background_image_other {
+	background-image: image-url("mike.jpg");
+	background-size: cover;
+    width: 100%;
+    height: 104%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: .9;
+}
+
+.body_style{
+	font-family: 'Muli', sans-serif;
+	color: #F5F5DC;
+    letter-spacing: 15px;
+    box-sizing: border-box;
+    margin: 4%;
+}

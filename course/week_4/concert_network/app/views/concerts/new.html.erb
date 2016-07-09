@@ -1,0 +1,32 @@
+<!-- views/concerts/new.html.erb -->
+
+<div class="background_image_other">
+	<main class="body_style">
+
+		<h2>Create a new concert!</h2>
+		<h4>Fill in the following information</h4>
+
+		<%= form_for @concert do |f| %>  
+			<%= f.label :artist %>		
+			<%= f.text_field :artist %>
+			<br>
+			<%= f.label :venue %>
+			<%= f.text_area :venue %>
+		 	<br>
+			<%= f.label :city_state %>
+			<%= f.text_area :city_state %>
+			<br>
+			<%= f.label :price %>
+			<%= f.text_area :price %>
+			<br>
+			<%= f.label :date %>
+			<%= f.datetime_field :date %>
+			<br>
+			<%= f.label :description %>
+			<%= f.text_area :description %>
+			<br>
+			<%= f.button %>
+		<% end %>
+
+	</main>
+</div>

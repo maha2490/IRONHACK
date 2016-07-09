@@ -1,0 +1,62 @@
+<!-- views/concerts/index.html.erb -->
+
+<div class="background_image_index">
+	<header>
+		<div class="header_wrap">
+		<h2> Concert Network </h2>
+		</div> <!-- header_wrap -->
+	</header>
+	<main>
+		<div class="main_wrap clearfix"><!-- clearfix is a class in class -->
+			<article>
+				<div class="upcoming_shows">
+					<p><strong>Upcoming shows</strong>
+					<ul>
+						<% @upcoming_concerts.each do |concert| %>
+						<li>
+							<%= concert.artist %>  /
+							<%= concert.city_state %> 
+							<%= link_to("more details", concert_path(concert.id)) %>
+							<br>
+						</li>
+						<% end %>
+						
+					</ul>
+					</p>
+				</div><!-- upcoming_shows -->
+			<!-- <aside> -->
+				<div class="previous_shows">
+					<p><strong>Previous shows</strong>
+					<ul>
+							<% @previous_concerts.each do |concert| %>
+							<li>
+								<%= concert.artist %>
+								<%= link_to("more details", concert_path(concert.id)) %>
+							</li>
+							<% end %>
+							
+						</ul>
+						<!-- testing out bootstrap item, not working -->
+						<!-- <div class="list-group">
+							  <a href="#" class="list-group-item active">
+							    <h4 class="list-group-item-heading">List group item heading</h4>
+							    <p class="list-group-item-text">...</p>
+							  </a>
+							</div> -->
+					</p>
+				</div>
+				<div class="create_new">
+						<%= link_to("create a new concert", new_concert_path) %>
+				
+
+					
+				</div>
+			<!-- </aside> -->
+			</article>
+		</div> <!-- main_wrap -->
+	</main>
+	<footer>
+		<div class="footer_wrap">		
+		</div>
+	</footer>	
+</div><!-- background_image_index -->

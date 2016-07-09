@@ -1,0 +1,17 @@
+<!-- views/concerts/show.html.erb -->
+<div class="background_image_other">
+	<main class="body_style">
+
+		<h2> Details for <%= @selected_concert.artist %> </h2>
+		<h4> "<%= @selected_concert.description %> " </h4>
+		<ul>
+			<li>Playing at:
+				<%= @selected_concert.venue %> , <%= @selected_concert.city_state %></li>
+			
+			<li>Ticket price: starting at $<%= @selected_concert.price %></li>
+			
+			<li>Doors open at: <%= @selected_concert.date %></li>	
+		</ul>
+		<h5>Leave comment for this show</h5>
+	</main>
+</div>
