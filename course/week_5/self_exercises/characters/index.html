@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> AJAX POST Setup </title>
+  <script   src="https://code.jquery.com/jquery-3.1.0.js"   integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="   crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</head>
+<body>
+  <h1> AJAX POST Setup </h1>
+
+  <form class="js-character-form">
+    <div>
+      <label for="name"> Name </label>
+      <input type="text" class="form_name" name="name" placeholder="C-3PO">
+    </div>
+
+    <div>
+      <label for="occupation"> Occupation </label>
+      <input type="text" class="form_occupation" name="occupation" placeholder="Protocol Droid">
+    </div>
+
+    <div>
+      <label for="weapon"> Weapon </label>
+      <input type="text" class="form_weapon" name="weapon" placeholder="Comic Relief">
+    </div>
+
+    <button type="submit">
+      Create new character
+    </button>
+  </form>
+
+  <button class="disp_char">Display all characters</button>
+  <div class="char_list">
+  	
+  </div>
+</body>
+</html>
