@@ -1,11 +1,16 @@
 body {
-  background-color: #5B6E75;
+  /*background-color: #ACAEA5;*/
+  background-image: url("blurry.png"); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .heading {
   text-align: center;
   margin-top: 8%;
-  text-shadow: 4px 0px 10px #2A750B;
+  text-shadow: 4px 0px 10px #888888;
   font-size: 46px;
 }
 
