@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sandwich_id: MyString
+  integer: MyString
+  ingredient_id: MyString
+  integer: MyString
+
+two:
+  sandwich_id: MyString
+  integer: MyString
+  ingredient_id: MyString
+  integer: MyString
