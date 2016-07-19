@@ -1,0 +1,24 @@
+<!-- this file is the base wrapper for all html.erb files -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AuthExercise</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% flash.each do |key, val| %>
+	<%= content_tag :div, val, id: key, style: "color:red;" %>
+<% end %>
+
+
+<%= yield %> <!-- all things rendered by the controllers are put here -->
+
+</body>
+</html>
+
+
