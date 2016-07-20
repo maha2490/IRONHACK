@@ -9,6 +9,13 @@
 
 lettuce = Ingredient.create(name: "lettuce", calories: "3")
 tomato = Ingredient.create(name: "tomato", calories:  "25")
+cheddar = Ingredient.create(name: "cheddar cheese", calories: "30")
+swiss = Ingredient.create(name: "swiss cheese", calories: "28")
+sauce = Ingredient.create(name: "special sauce", calories: "15")
 
 veggie = Sandwich.create(name: "veggie", bread_type: "multigrain")
 club = Sandwich.create(name: "club", bread_type: "baguette")
+
+veggie.ingredients.push(lettuce)
+veggie.ingredients.push(tomato)
+club.ingredients.push(cheddar)

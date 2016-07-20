@@ -5,23 +5,29 @@
 	<title>Sandwich Names</title>
 </head>
 <body>
-
-	<ul>
-		<% @sandwiches.each do |sandwich| %>
-			<li>
-				<a href="/sandwiches/<%=sandwich.id%>"> Name: <%=sandwich.name%></a>
-			</li>
+	<header class="header">
+		<% if user_signed_in? %>
+			<h6> Welcome <%= current_user.email %> </h6> 
+			<% else %>
+			<h6> No one logged in </h6>
+			<%= link_to("Log In", new_user_session_path) %>
+			<%= link_to("Sign Up", new_user_registration_path) %>
 		<% end %>
-	</ul>
+	</header>
+
+	<h1> Sandwichr: a sandwich app </h1>
+	<div class="main">
+		<strong> Currently made subs: </strong>
+		<% @sandwiches.each do |sandwich| %>
+			<div class="panel panel-default subs">
+			  <div class="panel-body">
+			    <a href="/sandwiches/<%=sandwich.id%>"> <%=sandwich.name.upcase%> </a>
+			  </div>
+			</div>
+		<% end %>					
+	</div>
 
 
-<% if user_signed_in? %>
-	<h2> Welcome <%= current_user.email %> </h2> 
-	<% else %>
-	<h2> No one logged in </h2>
-	<%= link_to("Log In", new_user_session_path) %>
-	<%= link_to("Sign Up", new_user_registration_path) %>
-<% end %>
 
 </body>
 </html>

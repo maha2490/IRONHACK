@@ -1,0 +1,13 @@
+<!-- sandwich_views_index.html.erb -->
+
+<h1>Sandwich Index</h1>
+
+	<ul>
+	<% @sandwich_array.each do |sandwich| %>
+	
+		<li> <%= link_to(sandwich.name, sandwich_path(sandwich.id) ) %>
+		
+		</li>
+	<% end %>
+	</ul>
+	

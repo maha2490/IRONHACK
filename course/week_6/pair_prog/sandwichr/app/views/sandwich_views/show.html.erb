@@ -1,0 +1,24 @@
+<!-- show.html.erb -->
+<body>
+<h1>About the <%= @sandwich.name %> sandwhich</h1>
+	<div class="current_sandwhich"
+		<ul>	
+			<li>Bread: <%= @sandwich.bread_type %> </li>
+				 <% @ingredients.each do |item| %> 
+			<li> Ingredient: <%= item.name %></li>
+			<% end %>
+
+		</ul>
+	</div>
+	<div class="all_ingredients" data-sandwich-id="<%= @sandwich.id %>">
+		<ul>
+			<% @all_ingredients.each do |ingredient| %>
+		<li><button class="add_ingredient" data-ingredient-id="<%= ingredient.id%>">
+			<%= ingredient.name %>
+			</button>
+		
+		</li>
+			<% end %>
+		</ul>
+	</div>
+</body>

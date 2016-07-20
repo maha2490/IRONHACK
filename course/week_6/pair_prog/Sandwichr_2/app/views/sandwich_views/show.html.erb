@@ -5,34 +5,45 @@
 	<title>Sandwcih detail</title>
 </head>
 <body>
+
+	<header class="header">
+		<% if user_signed_in? %>
+			<h6> Welcome <%= current_user.email %> </h6> 
+			<% else %>
+			<h6> No one logged in </h6>
+			<%= link_to("Log In", new_user_session_path) %>
+			<%= link_to("Sign Up", new_user_registration_path) %>
+		<% end %>
+	</header>
+	
+	<h2> the <%=@sandwich.name.upcase %> sub </h2>
+
 	<ul>
 		
-		<li>Name: <%=@sandwich.name %></li>
-		<li>Bread_type: <%= @sandwich.bread_type%></li>
-		<li class ="data-total-calories">Total Calories<%= @sandwich.total_calories%></li>
-		<li class ="data-ingredients">Ingredients: 
+		
+		<li> bread: <%= @sandwich.bread_type%></li>
+		<li class ="data-total-calories"> total calories<%= @sandwich.total_calories%></li>
+		<li class ="data-ingredients"> ingredients: 
 			<% @sandwich.ingredients.each do |ingredient|%>
-				<%=ingredient.name%>
+				<%=ingredient.name%> ,
 			<% end %>
 	
 		</li>
 
-		<ul>
-		<% @ingredients.each do |ingredient|%>
-			<li>	
+		<div class="ingredient_button">
+			<% @ingredients.each do |ingredient|%>
+				<div>
 
-			<!-- <button href="#"> Add: <%=ingredient.name%></button> -->
-			
-			<%= button_tag(type: 'button', data: { id: ingredient.id}) do %>
+				  <%= button_tag(type: 'button', data: { id: ingredient.id}) do %>
 
-			  <%= content_tag(:strong, "add " + ingredient.name) %>
-
+				  <%= content_tag(:strong, "add " + ingredient.name) %>
+				</div>
+				<% end %>
 			<% end %>
-
-
-			</li>
-		<% end %>
-		</ul>
+		</div>
+		
+		
+	
 
 
 

@@ -1,0 +1,2 @@
+class SandwhichViewsController < ApplicationController
+end

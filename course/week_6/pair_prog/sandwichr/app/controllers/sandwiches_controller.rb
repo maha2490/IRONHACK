@@ -10,13 +10,21 @@ class SandwichesController < ApplicationController
 	end
 
 	def add_ingredient
-		ingredient_id = params[:ingredient_id]
 		sandwich_id = params[:id]
-
 		sandwich = Sandwich.find_by(id:params[:id])
-		sandwich_ingredient = SandwichIngredient.create(sandwich_id: sandwich_id, ingredient_id: ingredient_id )
+
+		unless sandwich
+			render json: {error: "sandwich not found"}, status: 404
+			return
+		end
+
+		ingredient = Ingredient.find_by(id: params[:ingredient_id])
+		sandwich.ingredients.push(ingredient)
+		ingredients = sandwich.ingredients
+		response = {sandwich: sandwich, ingredients: ingredients}
+
+		render json:response
 		
-		render json: sandwich.to_json(:include => [:ingredients]
 	end
 
 	def show
@@ -29,8 +37,12 @@ class SandwichesController < ApplicationController
 	end
 
 	def update 
-		sandwich = Sandwich.find_by(id: params[:id])
-			unless sandwich
+
+	# 			checks to see if a sandwich exists by this ID
+	#	 object			 |	   item id in the URL
+	#       |			 |      |				|
+		sandwich = Sandwich.find_by(id: params[:id]) 
+			unless sandwich # will return either true/false, if the object exists
 				render json: {error: "sandwich not found"}, status:404
 				return
 			end
